@@ -9,7 +9,7 @@
 <body>
 
 <!--  
-	선언문(서블릿으로 변환되는 자바파일의 속석/기능을 추가)
+	선언문(서블릿으로 변환되는 자바파일의 속성/기능을 추가)
 -->
 	<%! String name = "HONG GIL DONG";
 		public String testFunc() {
