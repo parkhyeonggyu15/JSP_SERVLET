@@ -1,8 +1,8 @@
 package Ch04;
 
 public class UserDTO {
-	private String userid;
-	private String password;
+	public String userid;
+	public String password;
 	private String rePassword;
 	private String username;
 	private String zipcode;
@@ -36,10 +36,10 @@ public class UserDTO {
 			String email01, String email02, String birthType, String birthYear, String birthMonth, String birthDay,
 			String email_recv, String sms_recv) {
 		super();
-		this.username = username;
+		this.userid = userid;
 		this.password = password;
 		this.rePassword = rePassword;
-		this.userid = userid;
+		this.username = username;
 		this.zipcode = zipcode;
 		this.addr1 = addr1;
 		this.addr2 = addr2;
