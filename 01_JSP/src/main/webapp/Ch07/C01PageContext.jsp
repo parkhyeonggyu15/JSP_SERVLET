@@ -20,11 +20,14 @@
 
 
 	<!-- 표현식 -->
-	PROJECTPATH : <%=pageContext.getServletContext().getContextPath() %><br/>
-	PROJECTPATH : <%=request.getContextPath() %><br/>	
+	PROJECTPATH : <%=pageContext.getServletContext().getContextPath()%><br/>
+	PROJECTPATH : <%=request.getContextPath()%><br/>
 	<hr/>
-	<!-- EL -->
-	PROJECTPATH(EL) : ${pageContext.request.ContextPath()}<br/>
-	PROJECTPATH(EL) : ${request.ContextPath}
+	<!-- EL  -->
+	PROJECTPATH(EL) : ${pageContext.request.contextPath }<br/>
+	PROJECTPATH(EL) : ${request.contextPath } 
+	
+
+
 </body>
 </html>

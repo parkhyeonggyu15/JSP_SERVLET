@@ -8,19 +8,17 @@
 </head>
 <body>
 
-		<h1>MAIN PAGE</h1>
-		<pre>환영합니다 - !</pre>
-		
-		<span style="font-size:.7rem;color:green;"> 
-				${message}
-		</span>
-		
-		
-		
-		<%
+	<h1>MAIN PAGE</h1>
+	<pre>환영합니다 - !</pre>
+	<span style="font-size:.7rem;color:green;">
+	    	 ${message}
+	</span>
+	
+
+
+	<%
 		session.removeAttribute("isAuth");
 		session.removeAttribute("message");
-		%>
-	
+	%>
 </body>
 </html>

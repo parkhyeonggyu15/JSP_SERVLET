@@ -3,22 +3,19 @@ package Ch02;
 public class C04TestDto {
 	private String username;
 	private String password;
-	private String bgColor;
+	private String bgcolor;
+	
+	//디폴트 생성자
+	public C04TestDto() {}
+	//모든인자 생성자
 
-	// 디폴트생성자
-	public C04TestDto() {
-		super();
-	}
-
-	// 모든인자생성자
-	public C04TestDto(String username, String password, String bgColor) {
+	public C04TestDto(String username, String password, String bgcolor) {
 		super();
 		this.username = username;
 		this.password = password;
-		this.bgColor = bgColor;
+		this.bgcolor = bgcolor;
 	}
 
-	// getter and setter(필수)
 	public String getUsername() {
 		return username;
 	}
@@ -35,17 +32,20 @@ public class C04TestDto {
 		this.password = password;
 	}
 
-	public String getBgColor() {
-		return bgColor;
+	public String getBgcolor() {
+		return bgcolor;
 	}
 
-	public void setBgColor(String bgColor) {
-		this.bgColor = bgColor;
+	public void setBgcolor(String bgcolor) {
+		this.bgcolor = bgcolor;
 	}
 
-	// toString 재정의
 	@Override
 	public String toString() {
-		return "C04TestDto [username=" + username + ", password=" + password + ", bgColor=" + bgColor + "]";
+		return "C04TestDto [username=" + username + ", password=" + password + ", bgcolor=" + bgcolor + "]";
 	}
-}
+	
+	//getter and setter(★)
+	//toString 재정의
+	
+}	

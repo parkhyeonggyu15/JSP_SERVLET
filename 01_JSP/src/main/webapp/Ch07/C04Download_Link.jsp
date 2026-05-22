@@ -9,7 +9,7 @@
 <body>
 	
 	
-	<a href="./C05Download_Singlefile.jsp">[단일파일] file1 다운로드</a>
+	<a href="./C04Download_SingleFile.jsp">[단일파일] file1 다운로드</a>
 	<hr>
 	<a href="./C05Download_zip.jsp">[묶음파일] ZIP 다운로드</a>
 </body>
