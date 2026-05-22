@@ -2,13 +2,13 @@
     pageEncoding="UTF-8"%>
     
 <%
-
+	
 	//Request 속성설정
 	request.setAttribute("t1", "v1");
 
-	//세션 속성설정(기본 유지시간 1800초(60*30))
-	session.setAttribute("t2", "v2");
-
+    //세션 속성설정(기본 유지시간 1800초(60*30))
+    session.setAttribute("t2", "v2");
+    
 %>
 <!DOCTYPE html>
 <html>

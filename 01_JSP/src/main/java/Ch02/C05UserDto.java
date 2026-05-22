@@ -1,10 +1,10 @@
 package Ch02;
 
 public class C05UserDto {
-	private String username;
+	private String userid;
 	private String password;
 	private String rePassword;
-	private String userid;
+	private String username;
 	private String zipcode;
 	private String addr1;
 	private String addr2;
@@ -23,23 +23,17 @@ public class C05UserDto {
 	private String email_recv;
 	private String sms_recv;
 	
+	public C05UserDto() {}
 
-	// 디폴트생성자
-	public C05UserDto() {
-		super();
-	}
-
-	// 모든인자생성자
-
-	public C05UserDto(String username, String password, String rePassword, String userid, String zipcode, String addr1,
+	public C05UserDto(String userid, String password, String rePassword, String username, String zipcode, String addr1,
 			String addr2, String ph01, String ph02, String ph03, String tel01, String tel02, String tel03,
 			String email01, String email02, String birthType, String birthYear, String birthMonth, String birthDay,
 			String email_recv, String sms_recv) {
 		super();
-		this.username = username;
+		this.userid = userid;
 		this.password = password;
 		this.rePassword = rePassword;
-		this.userid = userid;
+		this.username = username;
 		this.zipcode = zipcode;
 		this.addr1 = addr1;
 		this.addr2 = addr2;
@@ -58,15 +52,13 @@ public class C05UserDto {
 		this.email_recv = email_recv;
 		this.sms_recv = sms_recv;
 	}
-	
-	// getter and setter(필수)
 
-	public String getUsername() {
-		return username;
+	public String getUserid() {
+		return userid;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserid(String userid) {
+		this.userid = userid;
 	}
 
 	public String getPassword() {
@@ -85,12 +77,12 @@ public class C05UserDto {
 		this.rePassword = rePassword;
 	}
 
-	public String getUserid() {
-		return userid;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getZipcode() {
@@ -229,17 +221,15 @@ public class C05UserDto {
 		this.sms_recv = sms_recv;
 	}
 
-	
-	// toString 재정의
-	
 	@Override
 	public String toString() {
-		return "C05UserDto [username=" + username + ", password=" + password + ", rePassword=" + rePassword
-				+ ", userid=" + userid + ", zipcode=" + zipcode + ", addr1=" + addr1 + ", addr2=" + addr2 + ", ph01="
-				+ ph01 + ", ph02=" + ph02 + ", ph03=" + ph03 + ", tel01=" + tel01 + ", tel02=" + tel02 + ", tel03="
-				+ tel03 + ", email01=" + email01 + ", email02=" + email02 + ", birthType=" + birthType + ", birthYear="
+		return "C05UserDto [userid=" + userid + ", password=" + password + ", rePassword=" + rePassword + ", username="
+				+ username + ", zipcode=" + zipcode + ", addr1=" + addr1 + ", addr2=" + addr2 + ", ph01=" + ph01
+				+ ", ph02=" + ph02 + ", ph03=" + ph03 + ", tel01=" + tel01 + ", tel02=" + tel02 + ", tel03=" + tel03
+				+ ", email01=" + email01 + ", email02=" + email02 + ", birthType=" + birthType + ", birthYear="
 				+ birthYear + ", birthMonth=" + birthMonth + ", birthDay=" + birthDay + ", email_recv=" + email_recv
 				+ ", sms_recv=" + sms_recv + "]";
 	}
+	
 	
 }

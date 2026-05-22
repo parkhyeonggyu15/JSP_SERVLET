@@ -1,12 +1,14 @@
 package Ch04;
 
-public class AuthDTO extends UserDTO{
-	
+public class AuthDTO {
+
 	private String userid;
 	private String password;
 	
+	//디폴트
 	public AuthDTO() {}
-	
+	//모든인자
+
 	public AuthDTO(String userid, String password) {
 		super();
 		this.userid = userid;
@@ -34,7 +36,9 @@ public class AuthDTO extends UserDTO{
 		return "AuthDTO [userid=" + userid + ", password=" + password + "]";
 	}
 	
+	//getter and setter
 	
+	//toString 
 	
 	
 }
