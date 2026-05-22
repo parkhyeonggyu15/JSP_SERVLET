@@ -13,13 +13,15 @@
 	for(Cookie cookie : cookies){
 		System.out.println("key : " + cookie.getName() + " val : " + cookie.getValue());
 		%>
-			<%= cookie.getName() %> : <%=cookie.getValue() %> <br/>
+			<%= cookie.getName() %> <%=cookie.getValue() %> <br/>
 			
-			<a href="./deleteCookie.jsp?name=<%=cookie.getName()%>"><%= cookie.getName() %> 쿠키삭제하기</a> <br/><br/>
-		<%
+			<a href="./deleteCookie.jsp?name=<%=cookie.getName()%>"><%= cookie.getName() %> 쿠키삭제하기</a><br/><br/>
+		<% 
 	}
-
+	
 %>
+
+
 
 </body>
 </html>

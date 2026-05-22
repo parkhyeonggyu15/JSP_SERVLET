@@ -9,6 +9,7 @@
 <body>
 
 
+
 	<h1>getSession Page</h1>
 	REQUEST t1 : ${t1}<br/>
 	SESSION t2 : ${t2}<br/>

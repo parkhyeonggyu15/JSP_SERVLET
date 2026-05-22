@@ -20,9 +20,9 @@
             outline:none;
             border-radius: 0;
             border : 1px solid gray;
-            padding-left:10px;    
+            padding-left:10px;
+           
         }
-        
         input[type="text"],
         input[type="password"]
         {
@@ -104,7 +104,7 @@
         method Attribute : 서버로 요청하는 방식
             - GET        : 사용자 요청 정보를 Query String으로 전달(Default)
             - POST       : 사용자 요청 정보를 Request body(Payload) 로 전달
-            - PUT        :
+            - PUT        : 
             - PATCH      : 
             - DELETE     : 
     -->
@@ -121,19 +121,18 @@
             <label>비밀번호</label>
             <input name="password" type="password" />
         </div>
- 
+       
         <div class="row">
             <input class="btn btn-submit"  type="submit" value="로그인" />
         </div>
         
-        <hr/>
-        	
-	    <span style="font-size:.7rem;color:red;">
-	    	 ${message}
-	    </span>
-	    
+		<hr/>
+		
+		<span style="font-size:.7rem;color:red;"> 
+			${message}
+		</span>
     </form>
-    
+
 
 	<%
 		session.removeAttribute("isAuth");
@@ -143,6 +142,3 @@
 </body>
 
 </html>
-
-
-

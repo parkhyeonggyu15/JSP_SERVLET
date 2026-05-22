@@ -12,7 +12,8 @@
 	//
 	response.sendRedirect("./03.jsp?username="+username+"&password="+password);
 	
-%>    
+	
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,8 +23,8 @@
 <body>
 
 	<h1>02.JSP PAGE</h1>
-	USERNAME : <%=username %><br/>
-	PASSWORD : <%=password %><br/>
-
+	USERNAME : <%= username %><br/>
+	PASSWORD : <%= password %><br/>
+	
 </body>
 </html>

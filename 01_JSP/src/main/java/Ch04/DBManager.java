@@ -10,28 +10,35 @@ import java.util.Properties;
 
 public class DBManager {
 
-    private  DBManager() {}
+	private DBManager() {}
 
     public static Connection getConnection() throws SQLException {
-	
+
         String driver   = "com.mysql.cj.jdbc.Driver";
         String url      = "jdbc:mysql://localhost:3306/SampleDB?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul&characterEncoding=UTF-8";
         String user     = "root";
-        String password = "1234";		
-        
+        String password = "1234";
+        		
         // TODO 2) Class.forName(driver)
-        //fwoiejowiejiof
-    
+ 
         try {
 			Class.forName(driver);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 //			e.printStackTrace();
 			throw new RuntimeException("DBManager's getConnection() Class.forName..."+e.getCause());
-		} 
+		}
+        
+        
+        // TODO 3) return DriverManager.getConnection(url, user, password);
         
         return DriverManager.getConnection(url, user, password);
-
+    	
+    	
+    	
+//        throw new UnsupportedOperationException(
+//                "DBManager.getConnection() — 아직 구현되지 않았습니다.\n" +
+//                "  → src/memo/DBManager.java 의 TODO 를 채우세요.");
     }
 
     /** AutoCloseable 자원 여러 개 안전 close */

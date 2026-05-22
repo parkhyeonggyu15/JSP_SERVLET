@@ -1,8 +1,8 @@
 package Ch04;
 
 public class UserDTO {
-	private String userid;
-	private String password;
+	public String userid;
+	public String password;
 	private String rePassword;
 	private String username;
 	private String zipcode;
@@ -23,9 +23,15 @@ public class UserDTO {
 	private String email_recv;
 	private String sms_recv;
 	
-	public UserDTO() {}
 
-	public UserDTO(String userid, String password, String rePassword, String username, String zipcode, String addr1,
+	// 디폴트생성자
+	public UserDTO() {
+		super();
+	}
+
+	// 모든인자생성자
+
+	public UserDTO(String username, String password, String rePassword, String userid, String zipcode, String addr1,
 			String addr2, String ph01, String ph02, String ph03, String tel01, String tel02, String tel03,
 			String email01, String email02, String birthType, String birthYear, String birthMonth, String birthDay,
 			String email_recv, String sms_recv) {
@@ -52,13 +58,15 @@ public class UserDTO {
 		this.email_recv = email_recv;
 		this.sms_recv = sms_recv;
 	}
+	
+	// getter and setter(필수)
 
-	public String getUserid() {
-		return userid;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -77,12 +85,12 @@ public class UserDTO {
 		this.rePassword = rePassword;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getUserid() {
+		return userid;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserid(String userid) {
+		this.userid = userid;
 	}
 
 	public String getZipcode() {
@@ -221,15 +229,17 @@ public class UserDTO {
 		this.sms_recv = sms_recv;
 	}
 
+	
+	// toString 재정의
+	
 	@Override
 	public String toString() {
-		return "C05UserDto [userid=" + userid + ", password=" + password + ", rePassword=" + rePassword + ", username="
-				+ username + ", zipcode=" + zipcode + ", addr1=" + addr1 + ", addr2=" + addr2 + ", ph01=" + ph01
-				+ ", ph02=" + ph02 + ", ph03=" + ph03 + ", tel01=" + tel01 + ", tel02=" + tel02 + ", tel03=" + tel03
-				+ ", email01=" + email01 + ", email02=" + email02 + ", birthType=" + birthType + ", birthYear="
+		return "C05UserDto [username=" + username + ", password=" + password + ", rePassword=" + rePassword
+				+ ", userid=" + userid + ", zipcode=" + zipcode + ", addr1=" + addr1 + ", addr2=" + addr2 + ", ph01="
+				+ ph01 + ", ph02=" + ph02 + ", ph03=" + ph03 + ", tel01=" + tel01 + ", tel02=" + tel02 + ", tel03="
+				+ tel03 + ", email01=" + email01 + ", email02=" + email02 + ", birthType=" + birthType + ", birthYear="
 				+ birthYear + ", birthMonth=" + birthMonth + ", birthDay=" + birthDay + ", email_recv=" + email_recv
 				+ ", sms_recv=" + sms_recv + "]";
 	}
-	
 	
 }

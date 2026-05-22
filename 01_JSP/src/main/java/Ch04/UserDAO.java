@@ -1,12 +1,12 @@
 package Ch04;
 
-import java.security.interfaces.RSAKey;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class UserDAO {
 
@@ -20,12 +20,13 @@ public class UserDAO {
     private static final String SQL_SELECT =
             "SELECT * " +
             "FROM tbl_user where userid=?";
-    
+
     private static final String SQL_UPDATE =
-    		"UPDATE tbl_user SET password=?, rePassword=?, username=?, zipcode=?, addr1=?, addr2=?, ph01=?, ph02=?, ph03=?, tel01=?, tel02=?, tel03=?, email01=?, email02=?, birthType=?, birthYear=?, birthMonth=?, birthDay=?, email_recv=?, sms_recv=?  WHERE userid=?";
+    		"UPDATE tbl_user SET password=?, rePassword=?, username=?, zipcode=?, addr1=?, addr2=?, ph01=?, ph02=?, ph03=?, tel01=?, tel02=?, tel03=?, email01=?, email02=?, birthType=?, birthYear=?, birthMonth=?,birthDay=?,email_recv=?,sms_recv=? WHERE userid=?";
 
     private static final String SQL_DELETE =
             "DELETE FROM tbl_user WHERE userid = ?";
+
 
     /**
      * 메모 1건 등록.
@@ -64,31 +65,30 @@ public class UserDAO {
     }
 
     //★ TODO ★
-    public UserDTO select(String userid) throws SQLException {
+    public UserDTO select(String userid) throws SQLException{
     	UserDTO dto = null;
-       	try
+    	try
     	(
     			Connection conn = DBManager.getConnection();
-    			PreparedStatement pstmt = conn.prepareStatement(SQL_SELECT);
+    			PreparedStatement pstmt = conn.prepareStatement(SQL_SELECT);	
     			
     	) 
     	{
-       		
-       		pstmt.setString(1, userid);
-       		ResultSet rs = pstmt.executeQuery();
-	    	if(rs.next()) {
-	    		dto = new UserDTO();
-	    		dto.setUserid(rs.getString("userid"));
-	    		dto.setPassword(rs.getString("password"));
-	    	}
+    		
+    		pstmt.setString(1, userid);
+    		ResultSet rs = pstmt.executeQuery();
+    		if(rs.next()) {
+    			dto = new UserDTO();
+    			dto.setUserid(rs.getString("userid"));
+    			dto.setPassword(rs.getString("password"));
+    			
+    		};
     	 	
-	    	return dto;	// null or UserDTO
+	    	return dto; // null or UserDTO
     	}finally {
     		
     	}
-       	
     }
-    
     /**
      * 전체 메모 조회.
      *
